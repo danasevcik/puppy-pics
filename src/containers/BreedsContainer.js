@@ -31,7 +31,7 @@ class BreedsContainer extends Component {
   render() {
     return (
       <div>
-      <h1>I am puppy container</h1>
+      <h1>Please choose a breed!</h1>
       {this.state.breeds && this.printCards()}
       </div>
     )

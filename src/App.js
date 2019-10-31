@@ -19,12 +19,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>I am app</h1>
-        <div id='img-container'>
-          <ImageContainer chosenBreed={this.state.chosenBreed}/>
-        </div>
         <div id='breeds-container'>
           <BreedsContainer handleClick={this.handleClick}/>
+        </div>
+        <div id='img-container'>
+          <ImageContainer chosenBreed={this.state.chosenBreed}/>
         </div>
       </div>
     );

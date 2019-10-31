@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  display: flex;
 }
 
 .App-logo {
@@ -19,4 +20,12 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+#breeds-container {
+  width: 50vw;
+}
+
+#img-container {
+  width: 50vw;
 }

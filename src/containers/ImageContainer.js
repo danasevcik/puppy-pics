@@ -24,10 +24,10 @@ class ImageContainer extends Component {
     }
     return (
       <div>
+        <h1>{this.props.chosenBreed}</h1>
         {this.state.photoUrl &&
           <img src={this.state.photoUrl} alt='puppy based on clicked breed' id='puppy-img'/>
         }
-        <h1>{this.props.chosenBreed}</h1>
       </div>
     )
   }
