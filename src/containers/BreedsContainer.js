@@ -21,17 +21,23 @@ class BreedsContainer extends Component {
   }
 
   printCards() {
-    console.log('here');
+    let keyNum = 0
+    return this.state.breeds.map(breed => {
+      keyNum++;
+      return <BreedCard breed={breed} key={keyNum} handleClick={this.props.handleClick}/>
+    })
   }
 
   render() {
     return (
       <div>
-        <h1>I am puppy container</h1>
-        {this.state.breeds && this.printCards()}
+      <h1>I am puppy container</h1>
+      {this.state.breeds && this.printCards()}
       </div>
     )
+
   }
+
 }
 
 export default BreedsContainer;

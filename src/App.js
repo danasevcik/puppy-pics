@@ -1,15 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
 import BreedsContainer from './containers/BreedsContainer'
+import ImageContainer from './containers/ImageContainer'
 
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>I am app</h1>
-      <BreedsContainer />
-    </div>
-  );
+class App extends Component {
+
+  state = {
+    breeds: null,
+    chosenBreed: null
+  }
+
+
+  handleClick = (breed) => {
+    this.setState({chosenBreed: breed})
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h1>I am app</h1>
+        <div id='img-container'>
+          <ImageContainer chosenBreed={this.state.chosenBreed}/>
+        </div>
+        <div id='breeds-container'>
+          <BreedsContainer handleClick={this.handleClick}/>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

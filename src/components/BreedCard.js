@@ -1,9 +1,9 @@
 import React from "react";
 
-function BreedCard() {
+function BreedCard(props) {
   return (
     <div>
-      <h1>I am puppy card</h1>
+      <p onClick={() => props.handleClick(props.breed)}>{props.breed}</p>
     </div>
   )
 }
