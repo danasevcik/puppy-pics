@@ -16,6 +16,11 @@ class ImageContainer extends Component {
         breed: this.props.chosenBreed
       })
     })
+    window.scroll({
+     top: 0,
+     left: 0,
+     behavior: 'smooth'
+    });
   }
 
   render() {
@@ -24,7 +29,9 @@ class ImageContainer extends Component {
     }
     return (
       <div>
-        <h1>{this.props.chosenBreed}</h1>
+        {this.state.photoUrl &&
+          <h1>{this.props.chosenBreed[0].toUpperCase() + this.props.chosenBreed.slice(1)}</h1>
+        }
         {this.state.photoUrl &&
           <img src={this.state.photoUrl} alt='puppy based on clicked breed' id='puppy-img'/>
         }
