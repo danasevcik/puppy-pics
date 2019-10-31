@@ -27,9 +27,9 @@ class ImageContainer extends Component {
     });
   }
 
-  // called from app
+  // rendered from app
   // if chosen breed exists in props and the new chosen is updated from the current breed shown
-  // call get photo 
+  // call get photo
   render() {
     if (this.props.chosenBreed && (this.props.chosenBreed !== this.state.currentBreed)) {
       console.log('here');
