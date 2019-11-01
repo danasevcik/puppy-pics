@@ -16,6 +16,7 @@ class BreedsContainer extends Component {
     fetch('https://dog.ceo/api/breeds/list/all')
     .then(resp => resp.json())
     .then(breeds => {
+      console.log(breeds);
       this.formatBreeds(breeds.message)
     })
   }
@@ -53,7 +54,7 @@ class BreedsContainer extends Component {
   render() {
     return (
       <div>
-        <h2>Please choose a breed!</h2>
+        <h2>Please choose a breed:</h2>
         <BreedSearch handleChange={this.handleChange}/>
         {this.state.breeds && this.printCards()}
       </div>

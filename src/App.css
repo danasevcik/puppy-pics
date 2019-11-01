@@ -11,11 +11,50 @@
   width: 5vw;
 }
 
-#breeds-container {
+.flex-container {
   width: 50vw;
-  overflow: scroll;
 }
 
-#img-container {
-  width: 50vw;
+#breed-card:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#search-field {
+  padding: 2vh 1vh;
+  outline: none;
+  margin-bottom: 2vh;
+}
+
+#search-field:focus {
+  background-color: #e7e7e7;
+  border: 2px solid #555;
+  border-radius: 5px;
+}
+
+#all-breeds-button {
+  background-color: #e7e7e7;
+  outline: none;
+  border: none;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid #e7e7e7;
+  border-radius: 5px;
+}
+
+#all-breeds-button:hover {
+  background-color: white;
+  border: 2px solid #e7e7e7;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#puppy-img {
+  height: 40vh;
+  width: 40vw;
+  object-fit: scale-down;
 }

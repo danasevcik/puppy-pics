@@ -25,10 +25,10 @@ class App extends Component {
       <div className='App'>
         <h1>Welcome To Puppy Pics <span><img id='paw-pic' src='https://cdn2.iconfinder.com/data/icons/miscellanea-set-4/100/_-4-512.png'/></span></h1>
         <div id='flex'>
-          <div id='breeds-container'>
+          <div className='flex-container'>
             <BreedsContainer handleClick={this.handleClick}/>
           </div>
-          <div id='img-container'>
+          <div className='flex-container'>
             <ImageContainer chosenBreed={this.state.chosenBreed}/>
           </div>
         </div>

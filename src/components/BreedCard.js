@@ -6,7 +6,8 @@ function BreedCard(props) {
   // adds click listener to each card and passes that breed up to app
   return (
     <div>
-      <p onClick={() => props.handleClick(props.breed)}>
+      <p id='breed-card'
+      onClick={() => props.handleClick(props.breed)}>
         {props.breed[0].toUpperCase() + props.breed.slice(1)}
       </p>
     </div>

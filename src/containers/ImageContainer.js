@@ -15,6 +15,7 @@ class ImageContainer extends Component {
     fetch(`https://dog.ceo/api/breed/${this.props.chosenBreed}/images/random`)
     .then(resp => resp.json())
     .then(image => {
+      console.log(image);
       this.setState({
         currentPhotoUrl: image.message,
         currentBreed: this.props.chosenBreed
