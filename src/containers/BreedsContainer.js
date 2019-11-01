@@ -6,7 +6,8 @@ class BreedsContainer extends Component {
 
   // state to hold all breeds
   state = {
-    breeds: null
+    breeds: null,
+    searchTerm: ''
   }
 
   // fetch to get all breeds
@@ -17,6 +18,11 @@ class BreedsContainer extends Component {
     .then(breeds => {
       this.formatBreeds(breeds.message)
     })
+  }
+
+  handleChange = (searchTerm) => {
+    console.log(searchTerm);
+    this.setState({searchTerm})
   }
 
   // get keys from the breeds object
@@ -30,20 +36,27 @@ class BreedsContainer extends Component {
   // pass the breed, key and click handler
   printCards() {
     let keyNum = 0
-    return this.state.breeds.map(breed => {
+    let breeds = this.state.breeds.filter(breed => {
+      return breed.includes(this.state.searchTerm)
+    })
+    console.log(breeds)
+    return breeds.map(breed => {
       keyNum++;
       return <BreedCard breed={breed} key={keyNum} handleClick={this.props.handleClick}/>
     })
   }
 
   // rendered from App
+  // render search input field
   // if the fetch has already completed and breeds is truthy in state
   // call print cards
   render() {
+    console.log('render', this.state);
+
     return (
       <div>
         <h1>Please choose a breed!</h1>
-        <BreedSearch />
+        <BreedSearch handleChange={this.handleChange}/>
         {this.state.breeds && this.printCards()}
       </div>
     )
