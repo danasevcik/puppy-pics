@@ -8,8 +8,17 @@ function BreedSearch(props) {
       <input type='name' value={searchTerm} placeholder='Search For a Breed'
         onChange={(e) => {setSearchTerm(e.target.value)}
       }/>
-      <input type='submit' value='submit'
-        onClick={(e) => {props.handleChange(searchTerm)}}
+      <input type='submit' value='Submit'
+        onClick={(e) => {
+          props.handleChange(searchTerm)
+          setSearchTerm('')
+        }}
+      />
+      <input type='submit' value='See All Breeds'
+        onClick={(e) => {
+          props.handleChange('')
+          setSearchTerm('')
+        }}
       />
     </div>
   )
