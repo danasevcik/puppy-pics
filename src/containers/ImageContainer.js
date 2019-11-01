@@ -32,7 +32,6 @@ class ImageContainer extends Component {
   // call get photo
   render() {
     if (this.props.chosenBreed && (this.props.chosenBreed !== this.state.currentBreed)) {
-      console.log('here');
       this.getPhoto()
     }
     return (

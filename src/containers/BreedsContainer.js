@@ -32,6 +32,7 @@ class BreedsContainer extends Component {
     this.setState({breeds: breedsArray})
   }
 
+  // filter breeds and return if the breed includes the search term
   // map through breeds in state and print card for each breed
   // pass the breed, key and click handler
   printCards() {
@@ -39,7 +40,6 @@ class BreedsContainer extends Component {
     let breeds = this.state.breeds.filter(breed => {
       return breed.includes(this.state.searchTerm)
     })
-    console.log(breeds)
     return breeds.map(breed => {
       keyNum++;
       return <BreedCard breed={breed} key={keyNum} handleClick={this.props.handleClick}/>

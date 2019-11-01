@@ -1,27 +1,30 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 
-function BreedSearch(props) {
+class BreedSearch extends Component {
 
-  const [searchTerm, setSearchTerm] = useState('')
-  return (
-    <div>
-      <input type='name' value={searchTerm} placeholder='Search For a Breed'
-        onChange={(e) => {setSearchTerm(e.target.value)}
-      }/>
-      <input type='submit' value='Submit'
+  state = {
+    searchTerm: ''
+  }
+
+  render() {
+    return (
+      <div>
+        <input type='name' value={this.state.searchTerm} placeholder='Search For a Breed'
+        onChange={(e) => {
+          this.setState({searchTerm: e.target.value}, () => {
+            this.props.handleChange(this.state.searchTerm)
+          })
+        }}/>
+        <input type='submit' value='See All Breeds'
         onClick={(e) => {
-          props.handleChange(searchTerm)
-          setSearchTerm('')
+          this.props.handleChange('')
+          this.setState({searchTerm: ''})
         }}
-      />
-      <input type='submit' value='See All Breeds'
-        onClick={(e) => {
-          props.handleChange('')
-          setSearchTerm('')
-        }}
-      />
-    </div>
-  )
+        />
+      </div>
+    )
+
+  }
 }
 
 export default BreedSearch;
