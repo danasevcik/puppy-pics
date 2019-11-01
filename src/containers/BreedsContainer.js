@@ -22,7 +22,6 @@ class BreedsContainer extends Component {
 
   // set state based on what the user types in breed search
   handleChange = (searchTerm) => {
-    console.log(searchTerm);
     this.setState({searchTerm})
   }
 
@@ -52,11 +51,9 @@ class BreedsContainer extends Component {
   // if the fetch has already completed and breeds is truthy in state
   // call print cards
   render() {
-    console.log('render', this.state);
-
     return (
       <div>
-        <h1>Please choose a breed!</h1>
+        <h2>Please choose a breed!</h2>
         <BreedSearch handleChange={this.handleChange}/>
         {this.state.breeds && this.printCards()}
       </div>

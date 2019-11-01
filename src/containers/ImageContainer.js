@@ -32,12 +32,17 @@ class ImageContainer extends Component {
   // call get photo
   render() {
     if (this.props.chosenBreed && (this.props.chosenBreed !== this.state.currentBreed)) {
+      // show loading image before new breed img is rendered
+      let img = document.querySelector('#puppy-img');
+      if (img) {
+        img.src = 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif'
+      }
       this.getPhoto()
     }
     return (
       <div>
         {this.state.currentPhotoUrl &&
-          <h1>{this.props.chosenBreed[0].toUpperCase() + this.props.chosenBreed.slice(1)}</h1>
+          <h2>{this.props.chosenBreed[0].toUpperCase() + this.props.chosenBreed.slice(1)}</h2>
         }
         {this.state.currentPhotoUrl &&
           <img src={this.state.currentPhotoUrl} alt='puppy based on clicked breed' id='puppy-img'/>

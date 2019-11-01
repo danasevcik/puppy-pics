@@ -1,6 +1,14 @@
 .App {
   text-align: center;
+}
+
+#flex {
   display: flex;
+}
+
+#paw-pic {
+  height: 5vh;
+  width: 5vw;
 }
 
 #breeds-container {

@@ -19,15 +19,18 @@ class App extends Component {
 
   // render the breeds container and image container
   // pass down click handler to breeds container
-  // pass down chosen breed to image container 
+  // pass down chosen breed to image container
   render() {
     return (
-      <div className="App">
-        <div id='breeds-container'>
-          <BreedsContainer handleClick={this.handleClick}/>
-        </div>
-        <div id='img-container'>
-          <ImageContainer chosenBreed={this.state.chosenBreed}/>
+      <div className='App'>
+        <h1>Welcome To Puppy Pics <span><img id='paw-pic' src='https://cdn2.iconfinder.com/data/icons/miscellanea-set-4/100/_-4-512.png'/></span></h1>
+        <div id='flex'>
+          <div id='breeds-container'>
+            <BreedsContainer handleClick={this.handleClick}/>
+          </div>
+          <div id='img-container'>
+            <ImageContainer chosenBreed={this.state.chosenBreed}/>
+          </div>
         </div>
       </div>
     );
