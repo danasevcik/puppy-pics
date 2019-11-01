@@ -16,7 +16,6 @@ class BreedsContainer extends Component {
     fetch('https://dog.ceo/api/breeds/list/all')
     .then(resp => resp.json())
     .then(breeds => {
-      console.log(breeds);
       this.formatBreeds(breeds.message)
     })
   }

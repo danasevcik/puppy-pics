@@ -21,7 +21,7 @@
 }
 
 #search-field {
-  padding: 2vh 1vh;
+  padding: 2vh 2vh;
   outline: none;
   margin-bottom: 2vh;
 }
@@ -33,7 +33,7 @@
 }
 
 #all-breeds-button {
-  background-color: #e7e7e7;
+  background-color: white;
   outline: none;
   border: none;
   color: black;
@@ -47,7 +47,7 @@
 }
 
 #all-breeds-button:hover {
-  background-color: white;
+  background-color: #e7e7e7;
   border: 2px solid #e7e7e7;
   border-radius: 5px;
   cursor: pointer;
