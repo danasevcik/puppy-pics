@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BreedCard from '../components/BreedCard'
+import BreedSearch from '../components/BreedSearch'
 
 class BreedsContainer extends Component {
 
@@ -42,6 +43,7 @@ class BreedsContainer extends Component {
     return (
       <div>
         <h1>Please choose a breed!</h1>
+        <BreedSearch />
         {this.state.breeds && this.printCards()}
       </div>
     )
