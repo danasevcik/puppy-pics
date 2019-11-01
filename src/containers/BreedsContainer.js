@@ -20,6 +20,7 @@ class BreedsContainer extends Component {
     })
   }
 
+  // set state based on what the user types in breed search
   handleChange = (searchTerm) => {
     console.log(searchTerm);
     this.setState({searchTerm})
