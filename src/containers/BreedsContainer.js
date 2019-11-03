@@ -4,7 +4,7 @@ import BreedSearch from '../components/BreedSearch'
 
 class BreedsContainer extends Component {
 
-  // state to hold all breeds
+  // state to hold all breeds & search term
   state = {
     breeds: null,
     searchTerm: ''
@@ -20,16 +20,16 @@ class BreedsContainer extends Component {
     })
   }
 
+  // get keys from the breeds object
+  // set state with list of breeds
+  formatBreeds(jsonBreeds) {
+    let breeds = Object.keys(jsonBreeds)
+    this.setState({breeds})
+  }
+
   // set state based on what the user types in breed search
   handleChange = (searchTerm) => {
     this.setState({searchTerm})
-  }
-
-  // get keys from the breeds object
-  // set state with list of breeds
-  formatBreeds(breeds) {
-    let breedsArray = Object.keys(breeds)
-    this.setState({breeds: breedsArray})
   }
 
   // filter breeds and return if the breed includes the search term

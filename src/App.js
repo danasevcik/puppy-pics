@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import BreedsContainer from './containers/BreedsContainer'
 import ImageContainer from './containers/ImageContainer'
-
 import './App.css';
 
 class App extends Component {

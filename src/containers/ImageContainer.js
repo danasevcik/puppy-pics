@@ -4,7 +4,7 @@ class ImageContainer extends Component {
 
   // state to hold currently shown breed and current photourl
   state = {
-    currentBreed: this.props.chosenBreed,
+    currentBreed: null,
     currentPhotoUrl: null
   }
 
@@ -32,7 +32,7 @@ class ImageContainer extends Component {
   // call get photo
   render() {
     if (this.props.chosenBreed && (this.props.chosenBreed !== this.state.currentBreed)) {
-      // show loading image before new breed img is rendered
+      // show loading image until new breed img is rendered
       let img = document.querySelector('#puppy-img');
       if (img) {
         img.src = 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif'
@@ -42,7 +42,7 @@ class ImageContainer extends Component {
     return (
       <div>
         {this.state.currentPhotoUrl &&
-          <h2>{this.props.chosenBreed[0].toUpperCase() + this.props.chosenBreed.slice(1)}</h2>
+          <h2>{this.state.currentBreed[0].toUpperCase() + this.state.currentBreed.slice(1)}</h2>
         }
         {this.state.currentPhotoUrl &&
           <img src={this.state.currentPhotoUrl} alt='puppy based on clicked breed' id='puppy-img'/>
