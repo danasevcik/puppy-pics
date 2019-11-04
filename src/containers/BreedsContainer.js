@@ -52,7 +52,7 @@ class BreedsContainer extends Component {
   // call print cards
   render() {
     return (
-      <div>
+      <div id='breeds-container'>
         <h2>Please choose a breed:</h2>
         <BreedSearch handleChange={this.handleChange}/>
         {this.state.breeds && this.printCards()}
