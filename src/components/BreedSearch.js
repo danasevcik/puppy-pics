@@ -21,7 +21,7 @@ class BreedSearch extends Component {
           placeholder='Search For a Breed'
           onChange={(e) => {
             this.setState({searchTerm: e.target.value}, () => {
-              this.props.handleChange(this.state.searchTerm)
+              this.props.handleChange(this.state.searchTerm.toLowerCase())
           })
         }}/>
         <br/>
