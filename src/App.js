@@ -4,6 +4,7 @@ import ImageContainer from './containers/ImageContainer'
 import './App.css';
 
 class App extends Component {
+  // test commit
 
   // state to hold the chosen breed
   // updated on click of a breed card
