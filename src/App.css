@@ -27,8 +27,8 @@
 }
 
 #search-field:focus {
-  background-color: #e7e7e7;
-  border: 2px solid #555;
+  background-color: #f0f1f2;
+  border: 2px solid #e1e2e3;
   border-radius: 5px;
 }
 
@@ -42,13 +42,13 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  border: 2px solid #e7e7e7;
+  border: 2px solid #f0f1f2;
   border-radius: 5px;
 }
 
 #all-breeds-button:hover {
-  background-color: #e7e7e7;
-  border: 2px solid #e7e7e7;
+  background-color: #f0f1f2;
+  border: 2px solid #f0f1f2;
   border-radius: 5px;
   cursor: pointer;
 }
