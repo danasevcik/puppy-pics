@@ -24,5 +24,5 @@ it('renders breed search html', () => {
         onClick={onClick}
       />
     </div>);
-  expect(wrapper).toExist(div);
+  expect(wrapper).toMatchElement(div);
 });

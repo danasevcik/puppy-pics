@@ -7,6 +7,7 @@ class App extends Component {
 
   // state to hold the chosen breed
   // updated on click of a breed card
+  //
   state = {
     chosenBreed: null
   }
